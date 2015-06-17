@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Demo: Treeview</title>
+
+	<link rel="stylesheet" href="../bower_components/steel-bootstrap/build/bootstrap.css">
+	<link rel="stylesheet" href="../build/Treeview.css">
+
+	<script src="../bower_components/soyutils/soyutils.js"></script>
+	<script src="../build/globals/Treeview.js"></script>
+</head>
+<body>
+	<h1>Treeview</h1>
+	<script type="text/javascript">
+		new steel.Treeview({
+			nodes: [
+				{
+					name: 'Movies',
+					children: [
+						{
+							name: 'The Hunt',
+							children: [
+								{name: 'year: 2012'},
+								{name: 'director: Thomas Vinterberg'}
+							]
+						},
+						{
+							name: 'Wild Tales',
+							children: [
+								{name: 'year: 2015'},
+								{name: 'director: Damián Szifron'}
+							],
+							expanded: true
+						}
+					],
+					expanded: true
+				}
+			]
+		}).render();
+	</script>
+</body>
+</html>
